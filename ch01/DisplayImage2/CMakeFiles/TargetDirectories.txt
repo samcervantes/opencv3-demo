@@ -1,0 +1,3 @@
+/Users/samcervantes/dev/opencv-demo/ch01/DisplayImage2/CMakeFiles/rebuild_cache.dir
+/Users/samcervantes/dev/opencv-demo/ch01/DisplayImage2/CMakeFiles/edit_cache.dir
+/Users/samcervantes/dev/opencv-demo/ch01/DisplayImage2/CMakeFiles/DisplayImage2.dir
