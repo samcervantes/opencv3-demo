@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/samcervantes/dev/opencv-demo/ch01/DisplayImage3/DisplayImage3.cpp
+/Users/samcervantes/dev/opencv3-demo/ch01/DisplayImage3/DisplayImage3.cpp
 opencv2/highgui/highgui.hpp
-/Users/samcervantes/dev/opencv-demo/ch01/DisplayImage3/opencv2/highgui/highgui.hpp
+/Users/samcervantes/dev/opencv3-demo/ch01/DisplayImage3/opencv2/highgui/highgui.hpp
 
 /usr/local/include/opencv/cxcore.h
 opencv2/core/core_c.h

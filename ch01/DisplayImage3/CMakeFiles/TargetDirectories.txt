@@ -1,3 +1,3 @@
-/Users/samcervantes/dev/opencv-demo/ch01/DisplayImage3/CMakeFiles/rebuild_cache.dir
-/Users/samcervantes/dev/opencv-demo/ch01/DisplayImage3/CMakeFiles/edit_cache.dir
-/Users/samcervantes/dev/opencv-demo/ch01/DisplayImage3/CMakeFiles/DisplayImage3.dir
+/Users/samcervantes/dev/opencv3-demo/ch01/DisplayImage3/CMakeFiles/rebuild_cache.dir
+/Users/samcervantes/dev/opencv3-demo/ch01/DisplayImage3/CMakeFiles/edit_cache.dir
+/Users/samcervantes/dev/opencv3-demo/ch01/DisplayImage3/CMakeFiles/DisplayImage3.dir

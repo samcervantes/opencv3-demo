@@ -1,3 +1,4 @@
+// Here we include only the highgui library we need and use the cv namespace to save on typing
 #include "opencv2/highgui/highgui.hpp"
 
 using namespace cv;
