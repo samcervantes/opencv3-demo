@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+project( PlayVideo3 )
+find_package( OpenCV REQUIRED )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable( PlayVideo3 PlayVideo3.cpp )
+target_link_libraries( PlayVideo3 ${OpenCV_LIBS} )

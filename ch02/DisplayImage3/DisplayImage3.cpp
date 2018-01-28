@@ -4,6 +4,7 @@
 using namespace cv;
 
 int main ( int argc, char** argv ) {
+	// The -1 argument tells it to return the loaded image as-is (with alpha channel)
 	Mat img = imread( argv[1], -1);
 	if( img.empty() ) return -1;
 
