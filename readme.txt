@@ -5,8 +5,12 @@
 2. Install CMAKE: brew install cmake
 
 
+*** Create a compile a program using the build script ***
+1. Create your project_name.cpp file
+2. ./build project_name
 
-*** Compile and run a program *** 
+
+*** Compile and run a program without the build script *** 
 
 1. Create your program.cpp file
 2. Create  CMakeLists.txt file in the same directory with the following text:
