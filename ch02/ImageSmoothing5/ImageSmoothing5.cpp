@@ -1,5 +1,6 @@
 #include <opencv2/opencv.hpp>
 
+
 void example2_5(const cv::Mat & image) {
 	// Create some windows to show the input and output images in
 	cv::namedWindow("Example2_5-in", cv::WINDOW_AUTOSIZE);
@@ -13,7 +14,7 @@ void example2_5(const cv::Mat & image) {
 
 	// Do the smoothing
 	// Note: could use GaussianBlur(), blur(), medianBlur or bilateralFilter
-
+	// Here we double-blur
 	cv::GaussianBlur(image, out, cv::Size(5,5), 3, 3);
 	cv::GaussianBlur(out  , out, cv::Size(5,5), 3, 3);
 
@@ -24,3 +25,14 @@ void example2_5(const cv::Mat & image) {
 	cv::waitKey(0);
 
 }
+
+int main(int argc, char** argv) {
+
+	// The -1 argument tells it to return the loaded image as-is (with alpha channel)
+	cv::Mat img = cv::imread( argv[1], -1);
+	if( img.empty() ) return -1;
+
+	example2_5(img);
+
+}
+

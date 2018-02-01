@@ -1,0 +1,27 @@
+# enter the project name as command line argument
+
+# Check to make sure a command line argument was supplied
+if [ $# -eq 0 ]
+  then
+    echo "Usage: build <project name>"
+    exit
+fi
+
+# Remove files from previous build
+rm CMakeCache.txt
+rm -rf CMakeFiles
+rm Makefile
+rm cmake_install.cmake
+rm $1
+rm CMakeLists.txt
+
+# Create the CMakeLists.txt file
+echo "cmake_minimum_required(VERSION 2.8)" >> CMakeLists.txt
+echo "project( "$1" )" >> CMakeLists.txt
+echo "find_package( OpenCV REQUIRED )" >> CMakeLists.txt
+echo "include_directories( \${OpenCV_INCLUDE_DIRS} )" >> CMakeLists.txt
+echo "add_executable( "$1" "$1".cpp )" >> CMakeLists.txt
+echo "target_link_libraries( "$1" \${OpenCV_LIBS} )" >> CMakeLists.txt
+
+cmake .
+make

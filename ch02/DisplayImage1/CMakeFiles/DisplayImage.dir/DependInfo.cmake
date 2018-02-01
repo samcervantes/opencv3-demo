@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/samcervantes/dev/opencv-demo/ch01/DisplayImage.cpp" "/Users/samcervantes/dev/opencv-demo/ch01/CMakeFiles/DisplayImage.dir/DisplayImage.cpp.o"
+  "/Users/samcervantes/dev/opencv-demo/ch02/DisplayImage1/DisplayImage.cpp" "/Users/samcervantes/dev/opencv-demo/ch02/DisplayImage1/CMakeFiles/DisplayImage.dir/DisplayImage.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")
 
