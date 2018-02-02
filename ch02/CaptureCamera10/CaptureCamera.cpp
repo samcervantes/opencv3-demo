@@ -27,10 +27,10 @@ int main( int argc, char** argv ) {
 
 		// Lets do some fun stuff
 
-		cv::pyrDown(frame, frame_down);
-		cv::pyrDown(frame_down, frame_down);
+		//cv::pyrDown(frame, frame_down);
+		//cv::pyrDown(frame_down, frame_down);
 
-		cv::Canny(frame_down, frame_canny, 10, 100, 3, true);
+		cv::Canny(frame, frame_canny, 25, 100, 3, true);
 
 		cv::imshow( "Example2_10", frame_canny );
 		if( cv::waitKey(33) >= 0 ) break;
