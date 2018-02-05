@@ -42,7 +42,7 @@ int main(int argc, char* argv[]) {
 		writer << logpolar_frame;
 
 		char c = cv::waitKey(10);
-		if(c==27) break;			// Allod the user to break out
+		if(c==27) break;			// Allow the user to break out
 	}
 	capture.release();
 }
