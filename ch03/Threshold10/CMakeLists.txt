@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+project( Threshold10 )
+find_package( OpenCV REQUIRED )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable( Threshold10 Threshold10.cpp )
+target_link_libraries( Threshold10 ${OpenCV_LIBS} )
