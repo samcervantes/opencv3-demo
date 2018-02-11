@@ -46,9 +46,20 @@ int main (int argc, char** argv) {
 	);
 
 	// Show the results
+	cv::namedWindow( "Raw", cv::WINDOW_AUTOSIZE );
+	cv::namedWindow( "Threshold", cv::WINDOW_AUTOSIZE );
+	cv::namedWindow( "Adaptive Threshold", cv::WINDOW_AUTOSIZE );
+
 	cv::imshow("Raw", Igray);
 	cv::imshow("Threshold", It);
 	cv::imshow("Adaptive Threshold", Iat);
+
+	cv::waitKey(0);
+
+	cv::destroyWindow( "Raw" );
+	cv::destroyWindow( "Threshold" );
+	cv::destroyWindow( "Adaptive Threshold" );
+
 
 	return 0;
 }

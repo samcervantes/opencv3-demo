@@ -1,0 +1,1 @@
+./AdaptiveThreshold 12 1 1 71 15 ../../chessboard1.png
