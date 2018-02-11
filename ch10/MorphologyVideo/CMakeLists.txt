@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+project( MorphologyVideo )
+find_package( OpenCV REQUIRED )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable( MorphologyVideo MorphologyVideo.cpp )
+target_link_libraries( MorphologyVideo ${OpenCV_LIBS} )
