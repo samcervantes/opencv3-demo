@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+project( LogPolar )
+find_package( OpenCV REQUIRED )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable( LogPolar LogPolar.cpp )
+target_link_libraries( LogPolar ${OpenCV_LIBS} )
