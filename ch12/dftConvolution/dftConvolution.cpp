@@ -10,7 +10,7 @@ int main(int argc, char** argv) {
 	}
 
 	// read image as grayscale (using 0 flag)
-	cv::Mat A = cv::imread(argv[1], 0);
+	cv::Mat A = cv::imread(argv[1], 1);
 
 	if(A.empty()) {
 		cout << "Cannot load " << argv[1] << endl;
