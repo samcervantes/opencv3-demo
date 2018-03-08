@@ -1,0 +1,1 @@
+./EMD ../../HandIndoorColor.jpg ../../HandOutdoorColor.jpg ../../HandOutdoorSunColor.jpg ../../fruits.jpg

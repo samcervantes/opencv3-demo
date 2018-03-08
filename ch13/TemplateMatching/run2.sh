@@ -1,0 +1,1 @@
+./TemplateMatching ../../faceTemplate.jpg ../../faceScene.jpg

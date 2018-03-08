@@ -1,0 +1,2 @@
+../../build EMD
+./run.sh
