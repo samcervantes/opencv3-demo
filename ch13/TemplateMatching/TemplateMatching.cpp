@@ -45,6 +45,7 @@ int main (int argc, char** argv) {
 	// Do the matching of the template with the image
 	for(int i=0; i<6; ++i) {
 		cv::matchTemplate(src, temp1, ftmp[i], i);
+		// Normalize the values (0-1)
 		cv::normalize(ftmp[i], ftmp[i], 1, 0, CV_MINMAX);
 	}
 
@@ -73,30 +74,25 @@ int main (int argc, char** argv) {
 	cv::imshow("CCOEFF", ftmp[4]);
 	cv::imshow("CCOEFF_NORMED", ftmp[5]);
 
-	/*
-	for(int i=0; i<ftmp[5].rows; i++) {
-		for(int j=0; j<ftmp[5].cols; j++) {
-			//if((int)ftmp[5].at<cv::Vec3b>(i,j)[0] == 255 || (int)ftmp[5].at<cv::Vec3b>(i,j)[1] == 255 || (int)ftmp[5].at<cv::Vec3b>(i,j)[2] == 255) {
-			//	cout << "Pixel(" << i << ", " << j << ") = " << (int)ftmp[5].at<cv::Vec3b>(i,j)[0] << " " << (int)ftmp[5].at<cv::Vec3b>(i,j)[1] << " " << (int)ftmp[5].at<cv::Vec3b>(i,j)[2] << endl;
-			//}
-			if(ftmp[5].at<double>(i,j) == 255) {
-				//cout << "Pixel(" << i << ", " << j << ") = " << (int)ftmp[5].at<uchar>(i,j) << endl;
-				
-				cv::rectangle(
-					ftmp[5],
-					cvPoint(i-2, j-2),
-					cvPoint(i+2, j+2),
-					cvScalar(255, 255, 255),
-					1,
-					8
-				);
-				
-			//}
-		}
-	}
-	cv::imshow("CCOEFF_NORMED", ftmp[5]);
-	*/
+	// Threshold the image
+	double threshold_value = 0.99;
+	int threshold_type = 0;
+	int const max_BINARY_value = 255;
+	cv::Mat src_gray1;
+	cv::Mat dst_thresh;
+
+	//cv::cvtColor(ftmp[5], src_gray1, CV_BGR2GRAY);
+
+	cv::threshold(ftmp[5], dst_thresh, threshold_value, max_BINARY_value, CV_THRESH_BINARY);
 	
+	cv::imshow("Threshold", dst_thresh);
+
+	cout << "--- Image properties ---" << endl;
+	cout << "Size: " << dst_thresh.size << endl;
+	cout << "Rows: " << dst_thresh.rows << endl;
+	cout << "Cols: " << dst_thresh.cols << endl;
+	cout << "Channels: " << dst_thresh.channels() << endl;	
+
 	// Let the user view the results
 	cv::waitKey(0);
 
